@@ -37,8 +37,8 @@ module.exports = merge(common, {
       chunkFilename: "[id].css"
     }),
     new webpack.SourceMapDevToolPlugin({
-      filename: '[name].js.map',
-      exclude: ['libs.js']
+      filename: '[name].bundle.js',
+      exclude: ['/libs/']
     })
   ],
 });

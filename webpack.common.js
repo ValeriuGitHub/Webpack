@@ -4,8 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
-    app: './src/index.js',
-	  libs: path.resolve(__dirname, './src/libs.js'),
+    app: './src/index.js'
   },
   plugins: [
     new CleanWebpackPlugin(['dist']),
@@ -14,6 +13,17 @@ module.exports = {
       template: "./src/pug/pages/index.pug"
     })
   ],
+  optimization: {
+    splitChunks: {
+       cacheGroups: {
+        commons: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all'
+        }
+      }
+    }
+  },
   module: {
     rules: [
       {
@@ -79,7 +89,6 @@ module.exports = {
   },
   output: {
     filename: '[name].bundle.js',
-    chunkFilename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist')
   }
 };
