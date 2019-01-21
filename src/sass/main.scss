@@ -1,0 +1,18 @@
+$transition: 300ms;
+
+// gray
+
+$black: #000;
+
+// Basic stylesheets
+
+@import "./tags.scss";
+@import "./misc.scss";
+@import "./style.scss";
+
+// Page parts
+
+// @import "./blocks/header.scss";
+// @import "./blocks/footer.scss";
+
+// Site pages styles

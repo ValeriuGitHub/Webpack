@@ -1,0 +1,24 @@
+body {
+	background: bisque;
+}
+
+.class {
+	color: green;
+	font-family: "Georgia-Bold";
+	text-align: center;
+}
+
+.center {
+	text-align: center;
+}
+
+@font-face {
+	font-family: 'Georgia-Bold';
+	src: url('../fonts/Georgia-Bold.eot');
+	src: url('../fonts/Georgia-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Georgia-Bold.woff2') format('woff2'),
+		url('../fonts/Georgia-Bold.woff') format('woff'),
+		url('../fonts/Georgia-Bold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
