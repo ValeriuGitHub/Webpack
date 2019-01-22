@@ -10,10 +10,9 @@ function component() {
 
   button.innerHTML = 'Click me and look at the console!';
   container.appendChild(button);
+  $("button").addClass("jquery-works");
 
-  // Note that because a network request is involved, some indication
-  // of loading would need to be shown in a production-level site/app.
-  button.onclick = e => import(/* webpackChunkName: "print" */ './print').then(module => {
+  button.onclick = e => import('./print').then(module => {
     var print = module.default;
     print();
   });
