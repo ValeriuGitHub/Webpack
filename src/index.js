@@ -1,8 +1,6 @@
 import './sass/style.scss';
 import './sass/main.scss';
-import $ from 'jquery';
-
-$('.class').addClass("classed");
+import $ from 'Jquery';
 
 function component() {
   var element = document.createElement('div');

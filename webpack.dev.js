@@ -10,7 +10,7 @@ module.exports = merge(common, {
   devServer: {
     contentBase: './dist',
     hot: true,
-    port: 3001
+    port: 5000
   },
 	module: {
   	rules: [
@@ -44,6 +44,6 @@ module.exports = merge(common, {
     new webpack.HotModuleReplacementPlugin(),
     new LiveReloadPlugin({
       appendScriptTag: true
-    }),
+    })
   ],
 });

@@ -1,17 +1,46 @@
 @import "./misc.scss";
 
-body {
-	background: bisque;
-}
-
 .class {
 	color: green;
-	font-family: "Georgia-Bold";
 	text-align: center;
 }
 
 .center {
 	text-align: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.footer-wrapper {
+  flex: 0 0 auto;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 40px;
+    &-small {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+.text {
+    text-align: center;
+    width: 50%;
+    line-height: 2.5;
+    font-size: 14px;
+    margin: 0 auto;
+    color: #000;
+    font-weight: normal;
+    font-family: "Roboto";
 }
 
 .container {
@@ -53,4 +82,15 @@ body {
 		url('../fonts/Georgia-Bold.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.eot');
+    src: url('../fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Roboto-Regular.woff2') format('woff2'),
+        url('../fonts/Roboto-Regular.woff') format('woff'),
+        url('../fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }

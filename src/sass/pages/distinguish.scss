@@ -1,0 +1,19 @@
+.distinguish {
+	padding: 100px 0px;
+	&__title {
+		font-size: 60px;
+		text-align: center;
+		margin-bottom: 50px;
+	}
+	&__text {
+		font-size: 15px;
+		text-align: justify;
+		font-family: "Roboto";
+		line-height: 1.5;
+		margin-bottom: 40px;
+	}
+	&__img {
+		margin: 0 auto;
+		display: block;
+	}
+}

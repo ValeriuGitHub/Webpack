@@ -1,3 +1,7 @@
 extends ./page.pug
 block content
-	block page
+	.wrapper
+		.content
+			include ../blocks/header.pug
+			block inner
+		include ../blocks/footer.pug

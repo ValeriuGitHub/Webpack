@@ -1,0 +1,13 @@
+.home {
+	padding: 60px 0px;
+	&__list {
+		display: flex;
+		@extend %list;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 40px;
+	}
+	&__item {
+		margin: 0px 15px;
+	}
+}

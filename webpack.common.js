@@ -4,15 +4,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
-    app: './src/index.js'
+    app: './src/index.js',
+    distinguish: './src/distinguish.js'
   },
-  plugins: [
-    new CleanWebpackPlugin(['dist']),
-    new HtmlWebpackPlugin({
-      filename: "index.html",
-      template: "./src/pug/pages/index.pug"
-    })
-  ],
   optimization: {
     splitChunks: {
        cacheGroups: {
@@ -24,6 +18,24 @@ module.exports = {
       }
     }
   },
+  plugins: [
+    new CleanWebpackPlugin(['dist']),
+    new HtmlWebpackPlugin({
+      filename: "index.html",
+      template: "./src/pug/pages/index.pug",
+      chunks: ['app', 'vendors']
+    }),
+    new HtmlWebpackPlugin({
+      filename: "about.html",
+      template: "./src/pug/pages/about.pug",
+      chunks: ['app', 'vendors']
+    }),
+    new HtmlWebpackPlugin({
+      filename: "distinguish.html",
+      template: "./src/pug/pages/distinguish.pug",
+      chunks: ['app', 'vendors', 'distinguish']
+    })
+  ],
   module: {
     rules: [
       {
